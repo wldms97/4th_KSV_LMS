@@ -1,0 +1,50 @@
+main form{
+  margin-bottom: 40px;
+}
+.member_table{
+  border-radius: 10px;
+}
+table{
+  text-align: center;
+  background: #fff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  text-align: center;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  overflow: hidden;
+}
+table thead{
+  background: var(--primary_c);
+  color: #fff;
+  line-height: 40px;
+}
+.st_join,
+.st_block,
+.st_session{
+  width: 110px;
+  height: 30px;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+  margin: 0 auto;
+  line-height: 30px;
+  display: inline-block;
+}
+.st_join{
+  background: var(--secondary_c);
+}
+.st_block{
+  background: var(--point_r);
+}
+.st_session{
+  background: #7d7d7d;
+}
+.btn_block{
+  width: 110px;
+  height: 30px;
+  border-radius: 5px;
+  color: var(--point_r);
+  border: 1px solid var(--point_r);
+  background: #fff;
+}

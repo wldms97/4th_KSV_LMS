@@ -1,0 +1,115 @@
+p {
+  margin: 0;
+}
+main {
+  height: 100%;
+}
+.login_wrapper {
+  width: 486px;
+  margin: 0 auto;
+}
+.img_wrapper .img_container img {
+  margin: auto;
+  display: block;
+}
+.login_wrapper p > a {
+  color: #001aff;
+  text-decoration: underline;
+}
+.login_form {
+  margin-top: 50px;
+}
+.login_form input {
+  border: none;
+  border-bottom: 1px solid var(--primary_c);
+  background: transparent;
+}
+.btn_login {
+  width: 100%;
+}
+
+/* sign up */
+.img_wrapper {
+  width: 50%;
+}
+.img_wrapper .img_container p {
+  font-size: 54px;
+  text-align: center;
+}
+.img_wrapper .img_container .slogan {
+  font-size: 54px;
+  text-align: center;
+  color: var(--point_b);
+}
+.img_wrapper .img_container .keyword {
+  color: var(--point_r);
+}
+.signup_wrapper {
+  width: 40%;
+  height: 1300px;
+}
+.signup_wrapper .sign_form {
+  background: #fff;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 60px 100px;
+  border-radius: 10px;
+}
+/* .sign_form input:focus {
+  outline: 0.5px solid var(--point_b);
+} */
+.signup_wrapper .sign_form hr {
+  margin: 0.5rem 0;
+}
+.signup_wrapper .sign_form h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.signup_wrapper .sign_form label span {
+  font-weight: 700;
+  color: var(--point_r);
+}
+.signup_wrapper .sign_form input {
+  border: none;
+  border-bottom: 1px solid var(--primary_c);
+}
+.signup_wrapper .sign_form .id_wrapper {
+  width: 100%;
+}
+.confirm_pw p {
+  color: var(--point_r);
+}
+.signup_wrapper .sign_form .user_file {
+  display: block;
+  width: 80px;
+  height: 27px;
+  background: var(--secondary_c);
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  line-height: 27px;
+}
+.attach_file input[type="file"] {
+  position: absolute;
+  width: 0;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+}
+.attach_file .user_profile {
+  width: 100%;
+}
+#range {
+  color: var(--point_b);
+}
+.see_more {
+  border: none;
+  background: none;
+  margin: 0;
+}
+.signup_wrapper .sign_form .form-check input {
+  border: 1px solid var(--primary_c);
+}
+.warning {
+  box-shadow: 0 0 0 0.25rem var(--point_r);
+}
