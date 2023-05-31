@@ -1,0 +1,96 @@
+ul, p{
+    margin: 0;
+    padding: 0;
+}
+.hidden{
+    display: none;
+}
+button{
+    border: none;
+    padding: none;
+    background: none;
+}
+.information{
+    width: 100%;
+}
+.thumbnail{
+    width: 285px;
+    height: 160px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    overflow: hidden;
+}
+.thumbnail img{
+    width: 100%;
+}
+.info{
+    width: 957px;
+    height: 160px;
+    padding: 25px 50px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background: #fff;
+}
+.main_info{
+    padding: 0 50px 0 0;
+    border-right: 1px solid #000;
+}
+.new_tag{
+    width: 50px;
+    height: 25px;
+    color: #fff;
+    background: var(--point_r);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 25px;
+}
+.pay_tag{
+    width: 50px;
+    height: 25px;
+    color: #fff;
+    background: var(--point_b);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 25px;
+}
+.free_tag{
+    width: 50px;
+    height: 25px;
+    color: #fff;
+    background: #597949;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 25px;
+}
+.option{
+    padding: 0 0 0 50px;
+}
+.lecture_option{
+    white-space: nowrap;
+    width: 25%;
+}
+.lecture_option input{
+    width: 15px;
+    height: 15px;
+}
+.class_description,
+.lecture_video_list,
+.btns {
+    margin-top: 100px;
+}
+.class_description h3,
+.lecture_video_list h3{
+    margin-bottom: 30px;
+}
+.lecture_video_list ul li:not(:last-child){
+    margin-bottom: 15px;
+}
+.lecture_video{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}

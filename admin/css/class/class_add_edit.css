@@ -1,0 +1,101 @@
+.hidden{
+    display: none;
+}
+h3{
+    margin-bottom: 20px;
+}
+.select_category,
+.cls_title,
+.cls_price,
+.cls_price_option,
+.lecture_option,
+.cls_text,
+.box,
+.class_upload{
+    margin-bottom: 50px;
+}
+.cls_thumb{
+    margin-bottom: 150px;
+}
+.select_category{
+    position: relative;
+}
+.select_category select{
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 5px;
+    height: 40px;
+    padding: 0 20px;
+    color: #7d7d7d;
+}
+.cls_title input{
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    color: #7d7d7d;
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.cls_price_option select{
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 5px;
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    color: #7d7d7d;
+}
+.cls_price input{
+    width: 100%;
+    height: 40px;
+    padding: 0 20px;
+    color: #7d7d7d;
+    text-align: right;
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+.lecture_option{
+    white-space: nowrap;
+    width: 25%;
+}
+.lecture_option input{
+    width: 15px;
+    height: 15px;
+}
+.cls_text textarea{
+    width: 100%;
+    height: 300px;
+    padding: 15px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: transparent;
+}
+.cls_thumb label {
+    display: block;
+    width: 100px;
+    height: 40px;
+    background: var(--primary_c);
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+}
+.cls_thumb input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+.cls_thumb .file_name{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background: transparent;
+    color: #7d7d7d;
+    padding: 0 20px;
+}
