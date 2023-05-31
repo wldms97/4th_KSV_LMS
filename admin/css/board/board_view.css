@@ -1,0 +1,57 @@
+h3,p{
+    margin: 0;
+    padding: 0;
+}
+.board_view{
+    width: 100%;
+    height: 100%;
+    background: #fff;
+}
+.board_view_title{
+    width: 100%;
+    height: 60px;
+    background: var(--primary_c);
+    color: #fff;
+    line-height: 60px;
+    padding: 0 30px;
+}
+.board_view_img{
+    width: 80%;
+    margin: 70px auto ;
+}
+.board_view_content{
+    width: 90%;
+    height: 70%;
+    margin: 70px auto ;
+}
+.board_view_img img{
+    width: 100%;
+}
+.btns_edit_del{
+    display: block;
+    width: 90%;
+    margin: 100px auto 0;
+}
+.attach_file{
+    border-top: 1px solid #000;
+    margin-top: 50px;
+    padding: 10px 0;
+}
+.attach_file p{
+    width: 90%;
+    margin: 10px auto 10px;
+}
+.btns_prev_next{
+    margin: 100px auto 0;
+}
+.btns_prev_next button{
+    margin: 0 100px;
+}
+.prev_btn i{
+    display: inline-block;
+    margin-right: 10px;
+}
+.next_btn i{
+    display: inline-block;
+    margin-left: 10px;
+}
