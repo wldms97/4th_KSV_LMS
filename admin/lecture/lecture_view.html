@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/admin/css/reset.css" />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    />
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard-dynamic-subset.css"
+    />
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+        crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/admin/css/common.css" />
+    <link rel="stylesheet" href="/admin/css/lecture/lecture_view.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="common_wrapper">
+      <aside>
+        <div class="aside_container">
+          <div class="profile_wrapper">
+            <div class="admin_profile">
+              <img src="/admin/img/profile.jpg" alt="관리자 프로필">
+            </div>
+            <p class="admin_name pre_rg_l">Admin</p>
+            <div class="d-flex justify-content-center gap-3">
+              <div class="icon_wrapper">
+                <a href="#"><i class="fa-solid fa-gear"></i></a>
+              </div>
+              <div class="icon_wrapper">
+                <a href="#"><i class="fa-regular fa-calendar-days"></i></a>
+              </div>
+              <div class="icon_wrapper">
+                <a href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="accordion mt-5" id="main-menu-wrap">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="hdDashboard">
+                <a class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#menuDashboard"
+                  aria-expanded="true" aria-controls="menuDashboard">
+                  <i class="fa-solid fa-chart-line"></i>
+                  <span class="main-menu-ft pre_rg_l">대시보드</span>
+                </a>
+              </h2>
+              <div id="menuDashboard" class="accordion-collapse collapse show" aria-labelledby="hdDashboard"
+                data-bs-parent="#main-menu-wrap">
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="hdUser">
+                <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuUser"
+                  aria-expanded="false" aria-controls="menuUser">
+                  <i class="fa-solid fa-user-group"></i>
+                  <span class="main-menu-ft pre_rg_l">회원 관리</span>
+                </a>
+              </h2>
+              <div id="menuUser" class="accordion-collapse collapse" aria-labelledby="hdUser"
+                data-bs-parent="#main-menu-wrap">
+                <ul class="accordion-body">
+                  <li><a href="#" class="sub-menu-ft"><span>&middot;</span><span>회원관리</span></a></li>
+                  <li><a href="#" class="sub-menu-ft"><span>&middot;</span><span>강사관리</span></a></li>
+                  <li><a href="#" class="sub-menu-ft"><span>&middot;</span><span>관리자관리</span></a></li>
+                  <li><a href="#" class="sub-menu-ft"><span>&middot;</span><span>회원휴면/탈퇴관리</span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="hdCourse">
+                <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuCourse"
+                  aria-expanded="false" aria-controls="menuCourse">
+                  <i class="fa-solid fa-graduation-cap"></i>
+                  <span class="main-menu-ft pre_rg_l">강좌 관리</span>
+                </a>
+              </h2>
+              <div id="menuCourse" class="accordion-collapse collapse" aria-labelledby="hdCourse"
+                data-bs-parent="#main-menu-wrap">
+                <ul class="accordion-body ">
+                  <li>
+                    <a href="#" class="sub-menu-ft">
+                      <span>&middot;</span>
+                      <span>과정카테고리</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="sub-menu-ft">
+                      <span>&middot;</span>
+                      <span>강좌리스트</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="sub-menu-ft">
+                      <span>&middot;</span>
+                      <span>강좌관리</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="hdEvent">
+                <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuEvent"
+                  aria-expanded="false" aria-controls="menuEvent">
+                  <i class="fa-solid fa-bullhorn"></i>
+                  <span class="main-menu-ft pre_rg_l">이벤트 관리</span>
+                </a>
+              </h2>
+              <div id="menuEvent" class="accordion-collapse collapse" aria-labelledby="hdEvent"
+                data-bs-parent="#main-menu-wrap">
+                <ul class="accordion-body ">
+                  <li>
+                    <a href="#" class="sub-menu-ft">
+                      <span>&middot;</span>
+                      <span>이벤트관리</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="sub-menu-ft">
+                      <span>&middot;</span>
+                      <span>쿠폰관리</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="hdBoard">
+                <a class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#menuBoard"
+                  aria-expanded="false" aria-controls="menuBoard">
+                  <i class="fa-solid fa-clipboard-question"></i>
+                  <span class="main-menu-ft pre_rg_l">게시판 관리</span>
+                </a>
+              </h2>
+              <div id="menuBoard" class="accordion-collapse collapse" aria-labelledby="hdBoard"
+                data-bs-parent="#main-menu-wrap">
+                <ul class="accordion-body ">
+                  <li>
+                    <a href="#" class="sub-menu-ft">
+                      <span>&middot;</span>
+                      <span>공지사항 게시판</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="sub-menu-ft">
+                      <span>&middot;</span>
+                      <span>수강후기 게시판</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="sub-menu-ft">
+                      <span>&middot;</span>
+                      <span>수강문의 게시판</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" class="sub-menu-ft">
+                      <span>&middot;</span>
+                      <span>커뮤니티 게시판</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <main class="main_container content_pd">
+        <div class="tt_wrapper d-flex justify-content-between align-items-center">
+          <div class="d-flex justify-content-between align-items-center gap-3">
+            <h2 class="main_tt pre_bold_l">강의 관리</h2>
+          </div>
+          <img src="/admin/img/img_logo.png" alt="logo">
+        </div>
+        <div class="information d-flex justify-content-between gap-3">
+            <div class="lec_thumbnail">
+                <img src="" alt="">
+            </div>
+            <div class="info d-flex flex-column justify-content-center gap-3">
+                <p class="pre_bold_m">HTML 입문 강의</p>
+                <p class="pre_rg_ms">HTML 01 notepad++ 설치, 코딩용 폰트 설치, HTML 태그의 구조, 문서타입선언</p>
+            </div>
+        </div>
+        <div class="lecture_description">
+            <h3 class="pre_bold_m">강의 설명</h3>
+            <p class="pre_rg_s">
+                [ HTML 중급 강의 ]웹 퍼블리셔 및 웹 개발을 처음 시작하는 분들에게 추천드리는 강좌입니다.<br>
+                <br>
+                HTML의 개념 및 구조에 대한 강의를 제공하고 있습니다.<br>
+                총 5개의 강의로 구성이 되어있으며, 각 강의별로 복습을 진행할 수 있도록 자료가 제공됩니다.<br>
+                커뮤니티를 통해 과제에 대한 피드백도 받아보실 수 있습니다.<br>
+                <br>
+                강좌 수강 후 테스트가 제공이 되며 테스트의 결과에 따라 다음 코스를 추천해드립니다.
+            </p>
+        </div>
+        <div class="lecture_video">
+            <h3 class="pre_bold_m">강의명 - HTML 01 notepad++ 설치, 코딩용 폰트 설치, HTML 태그의 구조, 문서타입선언</h3>
+            <video src="" class="video"></video>
+        </div>
+        <div class="btns d-flex justify-content-end gap-3">
+            <button class="btn_m_pc pre_rg_m" onclick="location.href=''">강의 목록</button>
+            <button class="btn_m_sc pre_rg_m" onclick="location.href=''">강의 수정</button>
+            <button class="btn_m_pr pre_rg_m" onclick="location.href=''">강의 삭제</button>
+        </div>
+      </main>
+    </div>
+    <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"
+  ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/class/class.js"></script>
+  </body>
+</html>
