@@ -1,0 +1,110 @@
+.option {
+  margin-bottom: 30px;
+}
+table > thead {
+  text-align: center;
+  height: 50px;
+}
+.table {
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+table > tbody {
+  text-align: center;
+}
+table > thead > tr > th {
+  background-color: #161e31 !important;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 700;
+}
+table > tbody > tr {
+  height: 80px;
+}
+table > tbody > tr > td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+form {
+  gap: 40px;
+}
+
+.customize {
+  position: relative;
+}
+
+.sub > label {
+  margin-bottom: 20px;
+}
+
+.image label {
+  width: 93px;
+  height: 40px;
+  background-color: #424769;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+input[type="file"] {
+  display: none;
+}
+.input-field {
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+input::placeholder,
+textarea::placeholder {
+  font-size: 14px;
+  color: #000;
+  padding-left: 20px;
+}
+.desc textarea {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  padding-top: 12px;
+}
+div > .d-flex {
+  flex-direction: row;
+  gap: 24px;
+}
+div > select,
+input[type="date"] {
+  padding-left: 20px;
+}
+div > select,
+div > input {
+  width: 50%;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 5px;
+  color: #000;
+  font-size: 14px;
+}
+.checkbox {
+  line-height: 40px;
+}
+.checkbox input {
+  display: block;
+}
+.checkbox label {
+  white-space: nowrap;
+}
+
+.ebutton {
+  margin-top: 60px;
+  gap: 40px;
+  flex-direction: row-reverse;
+}
