@@ -1,0 +1,19 @@
+main .cate_list_btn_wrapper {
+  margin-bottom: 40px;
+}
+table {
+  text-align: center;
+  background: #fff;
+  box-shadow: 4px 4px 4px rgb(0 0 0 / 25%);
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+table thead {
+  background: var(--primary_c);
+  color: #fff;
+}
+table tbody tr td:last-child {
+  width: 200px;
+}

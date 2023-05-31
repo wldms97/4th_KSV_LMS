@@ -1,0 +1,38 @@
+dialog {
+  width: 500px;
+  border: none;
+  padding: 50px 40px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  z-index: 10;
+  top: 25%;
+}
+dialog .modal-body {
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+dialog .modal-body > input,
+dialog .modal-body > select {
+  height: 40px;
+  border-radius: 5px;
+}
+.select_container .modal_open {
+  margin: 70px 102px;
+}
+.modal_bg {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: none;
+  pointer-events: none;
+}
+.modal_bg.active {
+  background: rgba(224, 233, 239, 0.9);
+}
+.category_wrapper .select_container .select_cate {
+  border: 1px solid var(--primary_c);
+  background: transparent;
+}
