@@ -1,0 +1,90 @@
+.option {
+  margin-bottom: 30px;
+}
+table > thead {
+  text-align: center;
+  height: 50px;
+}
+.table {
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+table > tbody {
+  text-align: center;
+}
+table > thead > tr > th {
+  background-color: #161e31 !important;
+  color: #fff;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 700;
+}
+table > tbody > tr {
+  height: 80px;
+}
+table > tbody > tr > td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+.thumb {
+  width: 110px;
+  height: 60px;
+  margin: 0 auto;
+}
+.customize {
+  position: relative;
+}
+.thumbnail label,
+.image label {
+  width: 93px;
+  height: 40px;
+  background-color: #424769;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.customize .fileName {
+  position: absolute;
+  line-height: 40px;
+  left: 100px;
+}
+input[type="file"] {
+  display: none;
+}
+.input-field {
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+input::placeholder,
+textarea::placeholder {
+  font-size: 14px;
+  color: #000;
+  padding-left: 20px;
+}
+.desc textarea {
+  width: 100%;
+  background-color: transparent;
+  border-radius: 5px;
+  padding-top: 12px;
+}
+.coupon select {
+  width: 50%;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #000;
+  font-size: 14px;
+}
+.ebutton {
+  gap: 40px;
+  flex-direction: row-reverse;
+}
