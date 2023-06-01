@@ -3,7 +3,7 @@
     $_SESSION['TITLE'] = "대시보드";
 
 include $_SERVER['DOCUMENT_ROOT']."/ksv_lms/admin/inc/admin_header.php";
-ini_set( 'display_errors', '0' );
+ini_set( 'display_errors', '1' );
 ?>
     <link rel="stylesheet" href="/ksv_lms/admin/css/dashboard/dashboard.css" />
     <?php
@@ -33,11 +33,37 @@ ini_set( 'display_errors', '0' );
     $page_result = $mysqli->query($sql3) or die("Query error! => ".$mysqli->error);
     $page_row = $page_result->fetch_assoc();
     $row_num = $page_row['cnt']; //전체 게시물 수
-
 ?>
       <main class="main_container content_pd d-flex flex-column">
         <div class="bookmark">
           <p class="pre_bold_l">즐겨찾기</p>
+          <?php
+            $sqlStep = "SELECT cate_name from lms_category WHERE cate_step=2";
+            $stepResult = $mysqli->query($sqlStep) or die("Query error! => ".$mysqli->error);
+            while($rs = $stepResult->fetch_object()){
+              $srs[]=$rs;
+            }
+            
+            $cateNum1;
+            $cateNum2;
+            $cateNum3;
+            $cateNum4;
+
+            $i=1;
+            while($i<=4)
+            {
+              $sqlCnt{$i} = "SELECT count(*) as cnt from lms_class WHERE cls_cate_mid='B000{$i}'";
+              $cntResult{$i} = $mysqli->query($sqlCnt{$i}) or die("Query error! => ".$mysqli->error);
+              $cntRow{$i} = $cntResult{$i}->fetch_assoc();
+              $cntNum{$i} = $cntRow{$i}['cnt']; //전체 게시물 수
+              $cateNum{$i} = $cntNum{$i};
+              $i++;
+            }
+            $cateNum1 = $cateNum{1};
+            $cateNum2 = $cateNum{2};
+            $cateNum3 = $cateNum{3};
+            $cateNum4 = $cateNum{4};
+          ?>
           <div class="d-flex">
             <?php
                 foreach($rsc as $r){
@@ -61,19 +87,19 @@ ini_set( 'display_errors', '0' );
                 <div class="desc d-flex flex-column justify-content-center">
                   <div class="d-flex">
                     <div class="dot red"></div>
-                    <p class="pre_rg_s">프론트엔드</p>
+                    <p class="pre_rg_s"><?php echo $srs[0]->cate_name; ?></p>
                   </div>
                   <div class="d-flex">
                     <div class="dot blue"></div>
-                    <p class="pre_rg_s">백엔드</p>
+                    <p class="pre_rg_s"><?php echo $srs[1]->cate_name; ?></p>
                   </div>
                   <div class="d-flex">
                     <div class="dot black"></div>
-                    <p class="pre_rg_s">UI/UX</p>
+                    <p class="pre_rg_s"><?php echo $srs[2]->cate_name; ?></p>
                   </div>
                   <div class="d-flex">
                     <div class="dot green"></div>
-                    <p class="pre_rg_s">일반 디자인</p>
+                    <p class="pre_rg_s"><?php echo $srs[3]->cate_name; ?></p>
                   </div>
                 </div>
               </div>
@@ -145,6 +171,63 @@ ini_set( 'display_errors', '0' );
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
     <script src="/ksv_lms/admin/js/dashboard/dashboard.js"></script>
+    <script>
+      const ctx = document.getElementById("myChart");
+
+      var doughnutData = [<?php echo $cateNum1;?>, <?php echo $cateNum2;?>, <?php echo $cateNum3;?>, <?php echo $cateNum4;?>];
+
+      var doughnutColors = ["#F9B17A", "#676F9D", "#161e31", "#006400"];
+
+      var doughnutChart = new Chart(ctx, {
+        type: "doughnut",
+        data: {
+          datasets: [
+            {
+              data: doughnutData,
+              backgroundColor: doughnutColors,
+            },
+          ],
+        },
+        options: {
+          //ma...
+          responsive: false,
+          cutout: 30,
+          animation: {
+            animateRotate: true,
+          },
+        },
+      });
+
+
+      const ctx2 = document.getElementById("myChart2");
+
+      const labels = ["<?php echo $srs[0]->cate_name; ?>", "<?php echo $srs[1]->cate_name; ?>", "<?php echo $srs[2]->cate_name; ?>", "<?php echo $srs[3]->cate_name; ?>"];
+      const data = {
+        labels: labels,
+        datasets: [
+          {
+            data: [80, 59, 65, 40],
+            backgroundColor: ["#F9B17A", "#676F9D", "#161e31", "#006400"],
+          },
+        ],
+      };
+
+      const config = {
+        type: "bar",
+        data: data,
+        options: {
+          responsive: false,
+          indexAxis: "x",
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: true,
+            },
+          },
+        },
+      };
+      const stackedBar = new Chart(ctx2, config);
+    </script>
 <?php
     include $_SERVER['DOCUMENT_ROOT']."/ksv_lms/admin/inc/admin_footer_tail.php";
 ?>
